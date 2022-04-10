@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  /* overflow: hidden; */
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(109, 185, 241);
+  background: linear-gradient(
+    150deg,
+    rgba(109, 185, 241, 1) 0%,
+    rgba(202, 246, 245, 1) 100%
+  );
+  /* background-color: #0beef9;
+  background-image: linear-gradient(315deg, #0beef9 0%, #48a9fe 74%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-appearance: none;
+}
