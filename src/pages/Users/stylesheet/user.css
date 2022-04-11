@@ -3,6 +3,7 @@
   border-radius: 10px;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: rgba(17, 17, 26, 0.3) 5px 5px 16px;
 }
 .users-container ul {
   list-style: none;
@@ -53,7 +54,7 @@
 }
 
 .chat-container {
-  width: 500px;
+  width: 400px;
   height: 550px;
   display: flex;
   flex-direction: column;
@@ -68,18 +69,16 @@
 }
 .chat-container .chat-header button {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 10px;
   background-color: transparent;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   padding: 5px 15px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s ease;
 }
 .chat-container .chat-header button:hover {
-  background-color: #6db9f1;
-  color: white;
+  color: #6db9f1;
 }
 .chat-container .message-container {
   width: 100%;
@@ -134,7 +133,7 @@
   height: 100%;
 }
 .chat-container .chat-footer form .myMessage {
-  width: 80%;
+  width: 70%;
   border-bottom: 1px solid #ccc;
   margin-right: 1rem;
   padding: 5px;

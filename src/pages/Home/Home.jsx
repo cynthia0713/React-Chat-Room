@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import Axios from 'axios';
 import { loginChecker } from '../../login_check';
+import { API_HOST } from '../../public/const';
 
 const Home = () => {
   //Email and Password
@@ -33,7 +34,7 @@ const Home = () => {
       .then(async user => {
         console.log("Success", user)
         const token = await user.user.getIdToken(); 
-        const sessionCookie = await Axios.post("http://localhost:8000/api/signin", { token })
+        const sessionCookie = await Axios.post(`${API_HOST}/api/signin`, { token })
         console.log(sessionCookie.data)
         setCookie("lsc", sessionCookie, {
           path: "/", 

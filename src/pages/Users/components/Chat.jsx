@@ -2,6 +2,8 @@ import { useState, useEffect, useContext } from "react";
 import { Context } from "../../../context";
 import { v4 } from 'uuid';
 import ScrollToBottom from 'react-scroll-to-bottom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 const Chat = ({chatTarget, setChatTarget, sortName, setAllChats, allChats, readMsg, setReadMsg}) => {
   const me = useContext(Context).userInfo //me = userInfo
@@ -58,7 +60,7 @@ const Chat = ({chatTarget, setChatTarget, sortName, setAllChats, allChats, readM
   return (
     <div className='chat-container'>
       <div className="chat-header">
-        <button onClick={() => {setChatTarget({})}}>Back</button>
+        <button onClick={() => {setChatTarget({})}}><FontAwesomeIcon icon={faAngleLeft} size="lg" /></button>
         <h2>{chatTarget.name}</h2>
       </div>
       <ScrollToBottom className="message-container">
